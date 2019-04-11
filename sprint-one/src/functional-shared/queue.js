@@ -15,16 +15,16 @@ var queueMethods = {
     this.counter++;
   },
   dequeue: function () {
-    console.log(this);
+
     this.front++;
     var temp = this[this.front];
-    console.log(temp);
+
     delete this[this.front];
     this.counter--;
     return temp;
   },
   size: function () {
-    return(this.counter < 0 ? this.counter = 0 : this.counter);
+    return (this.counter < 0 ? this.counter = 0 : this.counter);
   }
 };
 

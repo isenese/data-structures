@@ -17,7 +17,7 @@ var stackMethods = {
     return temp;
   },
   size: function () {
-    return (this.count < 0? this.count = 0:this.count);
+    return (this.count < 0 ? this.count = 0 : this.count);
   }
 };
 
