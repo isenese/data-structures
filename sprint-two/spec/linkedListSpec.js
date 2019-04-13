@@ -51,5 +51,9 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should check if list is not empty before removing head', function () {
+    expect(linkedList.removeHead()).to.equal('list is empty, no head to remove');
+  });
+
   // add more tests here to test the functionality of linkedList
 });

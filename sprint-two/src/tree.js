@@ -3,6 +3,7 @@ var Tree = function(value) {
   newTree.value = value;
   _.extend ( newTree, treeMethods);
   newTree.children = [];
+  newTree.counter = 1;
   return newTree;
 };
 
@@ -10,6 +11,7 @@ var treeMethods = {};
 
 treeMethods.addChild = function(value) {
   this.children.push(new Tree (value));
+  this.counter++;
   return value;
 };
 
@@ -25,6 +27,10 @@ treeMethods.contains = function(target) {
     }
   }
   return isThere;
+};
+
+treeMethods.size = function() {
+  return this.counter;
 };
 /*
  * Complexity: What is the time complexity of the above functions?
