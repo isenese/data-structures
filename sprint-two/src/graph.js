@@ -65,4 +65,11 @@ Graph.prototype.forEachNode = function(cb) {
 };
 /*
  * Complexity: What is the time complexity of the above functions?
+ addNode:constant
+ contains:linear
+ removeNode:O(2n)
+ hasEdge: linear
+ addEdge: constant
+ removeEdge: O(2n)
+ forEachNode: linear
  */
