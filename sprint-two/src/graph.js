@@ -1,5 +1,6 @@
 var Graph = function() {
   this.nodes = {};
+  this.counter = 0;
 //  this.edges = [];
 };
 
@@ -7,6 +8,7 @@ var Graph = function() {
 Graph.prototype.addNode = function(node) {
   if (!this.nodes.node) {
     this.nodes[node] = [];
+    this.counter++;
   }
 };
 
@@ -26,6 +28,7 @@ Graph.prototype.removeNode = function(node) {
     this.removeEdge(this.nodes[node][x], node);
   }
   delete this.nodes[node];
+  this.counter--;
 };
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
@@ -62,6 +65,10 @@ Graph.prototype.forEachNode = function(cb) {
   for (var key in this.nodes) {
     cb(key);
   }
+};
+
+Graph.prototype.size = function() {
+  return this.counter;
 };
 /*
  * Complexity: What is the time complexity of the above functions?

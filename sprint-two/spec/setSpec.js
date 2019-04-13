@@ -24,4 +24,10 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  it('should include a size function that returns the size of the set', function() {
+    set.add('Mel Gibson');
+    set.add('Danny Glover');
+    expect(set.size()).to.equal(2);
+  });
+
 });
