@@ -37,8 +37,8 @@ HashTable.prototype.retrieve = function(k) {
 
 HashTable.prototype.remove = function(k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
-  for (var i = 0; i < this._storage[index].length; i++){
-    if (this._storage[index][i]){
+  for (var i = 0; i < this._storage[index].length; i++) {
+    if (this._storage[index][i]) {
       this._storage[index].splice(i,1);
     }
   }
